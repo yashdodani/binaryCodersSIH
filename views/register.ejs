@@ -39,7 +39,7 @@
       </nav>
     </header>
 
-    <section class="section--">
+    <section class="section--registration">
       <div class="header--login">
         <h1>New Registration</h1>
         <p><span class="imp">* </span>indicates mandatory fields</p>
@@ -50,13 +50,11 @@
           <strong> Type of Organisation (School / College)</strong>
           <span class="imp">*</span>
         </div>
-        <input
-          type="text"
-          name="org"
-          class="form-control"
-          placeholder="School/College"
-          required
-        />
+        <select name="organisation" id="org" class="dropdown">
+          <option value="select">Select</option>
+          <option value="school">School</option>
+          <option value="college">College</option>
+        </select>
       </div>
 
       <div class="state form-group">
@@ -72,7 +70,7 @@
         ></select>
       </div>
 
-      <div class="password form-group">
+      <div class="city form-group">
         <div class="question">
           <strong>City </strong> <span class="imp">*</span>
         </div>
@@ -110,16 +108,30 @@
         />
       </div>
 
-      <div class="mobile__org form-group">
+      <div class="password form-group">
         <div class="question">
-          <strong>Mobile Number</strong>
+          <strong>Password</strong>
           <span class="imp">*</span>
         </div>
         <input
-          type="number"
-          name="org"
+          type="text"
+          name="password"
           class="form-control"
-          placeholder="Enter mobile number"
+          placeholder="Enter password"
+          required
+        />
+      </div>
+
+      <div class="institute__code form-group">
+        <div class="question">
+          <strong>Institute Code</strong>
+          <span class="imp">*</span>
+        </div>
+        <input
+          type="text"
+          name="institute__code"
+          class="form-control"
+          placeholder="Enter code"
           required
         />
       </div>

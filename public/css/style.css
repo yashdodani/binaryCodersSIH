@@ -42,13 +42,14 @@ body {
 }
 
 .nav__item {
-  padding: 0 3rem;
+  padding: 0 1rem;
 }
 
 .nav__link {
   text-decoration: none;
   color: #413e66;
   font-weight: 400;
+  font-size: 0.8rem;
 }
 
 .nav__link:hover {
