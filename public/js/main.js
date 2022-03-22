@@ -136,28 +136,32 @@ function print_city(city_id, city_index) {
   }
 }
 
-const classSelect = document.querySelectorAll(".class");
-const classUpload1 = document.querySelectorAll(".class1");
-const classUpload2 = document.querySelectorAll(".class2");
-const classUpload3 = document.querySelectorAll(".class3");
-const classUpload4 = document.querySelectorAll(".class4");
-const classUpload5 = document.querySelectorAll(".class5");
-const classUpload6 = document.querySelectorAll(".class6");
-const classUpload7 = document.querySelectorAll(".class7");
-const classUpload8 = document.querySelectorAll(".class8");
-const classUpload9 = document.querySelectorAll(".class9");
-const classUpload10 = document.querySelectorAll(".class10");
-const classUpload11 = document.querySelectorAll(".class11");
-const classUpload12 = document.querySelectorAll(".class12");
+// Modal window for guidelines ///////////////////
 
-const openUpload = function () {};
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+const btnOpenModal = document.querySelector("#show-modal");
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+  document.getElementsByTagName("body")[0].style.overflow = "hidden"; // lock scroll
+};
 
-classSelect.forEach((item, i) => {
-  item.addEventListener("click", () => {
-    const upload = document.querySelector(`.class${i + 1}`);
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+  document.getElementsByTagName("body")[0].style.overflow = "visible"; // enabled scroll
+};
 
-    upload.classList.toggle("hidden");
-  });
+btnOpenModal.addEventListener("click", openModal);
+
+btnCloseModal.addEventListener("click", closeModal);
+
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
 });
-
-// smooth functionality kal add kar denge abhi itna hi kar.

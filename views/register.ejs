@@ -1,184 +1,241 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ffa6beebe6.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/ffa6beebe6.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 
-  <script src="js/main.js"></script>
+    <title>Binary Coders - Database for everyone</title>
+  </head>
 
-  <title>Binary Coders - Database for everyone</title>
-</head>
-
-<body>
-  <header>
-    <nav class="nav sticky">
-      <div class="logo">
-        <img src="img/sj.webp" alt="" />
-        <h1 class="navh1">storemydata.in</h1>
-      </div>
-      <ul class="nav__links">
-        <li class="nav__item">
-          <a class="nav__link" href="index.html">Home</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#section--last">About us</a>
-        </li>
-
-        <li class="nav__item">
-          <a class="nav__link" href="#section--last">Contact us</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-
-  <section class="section--registration">
-    <div class="header--login">
-      <h1>New Registration</h1>
-      <p><span class="imp">* </span>indicates mandatory fields</p>
-    </div>
-
-    <form id="registerForm" action="/auth/register" method="post">
-      <div class="type__org form-group">
-        <div class="question">
-          <strong> Type of Organisation (School / College)</strong>
-          <span class="imp">*</span>
+  <body>
+    <header>
+      <nav class="nav sticky">
+        <div class="logo">
+          <img src="img/logo1.png" alt="" />
+          <h1 class="navh1">storemydata.in</h1>
         </div>
-        <select name="organisation" id="org" class="dropdown">
-          <option value="select">Select</option>
-          <option value="school">School</option>
-          <option value="college">College</option>
-        </select>
-      </div>
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--last">About us</a>
+          </li>
 
-      <div class="state form-group">
-        <div class="question">
-          <strong>State </strong> <span class="imp">*</span>
-        </div>
-        <select onchange="print_city('state', this.selectedIndex);" id="sts" name="state" class="form-control dropdown"
-          required></select>
-      </div>
-
-      <div class="city form-group">
-        <div class="question">
-          <strong>City </strong> <span class="imp">*</span>
-        </div>
-        <select id="state" class="form-control dropdown" required></select>
-        <script language="javascript">
-          print_state("sts");
-        </script>
-      </div>
-
-      <div class="name__org form-group">
-        <div class="question">
-          <strong>Name of organisation</strong>
-          <span class="imp">*</span>
-        </div>
-        <input type="text" name="organisationName" class="form-control" placeholder="Enter name of Organisation" required />
-      </div>
-
-      <div class="email__org form-group">
-        <div class="question">
-          <strong>Email Address</strong>
-          <span class="imp">*</span>
-        </div>
-        <input type="email" name="email" class="form-control" placeholder="Enter email adress" required />
-      </div>
-
-      <div class="password form-group">
-        <div class="question">
-          <strong>Password</strong>
-          <span class="imp">*</span>
-        </div>
-        <input type="text" name="password" class="form-control" placeholder="Enter password" required />
-      </div>
-
-      <div class="institute__code form-group">
-        <div class="question">
-          <strong>Institute Code</strong>
-          <span class="imp">*</span>
-        </div>
-        <input type="text" name="instituteCode" id="instituteCode" class="form-control" placeholder="Enter code" required />
-      </div>
-
-      <button type="submit" class="btn btn--login">REGISTER</button>
-    </form>
-    <div class="ask__login">
-      <p><a href="login">Login</a></p>
-    </div>
-  </section>
-
-  <section id="section--last">
-    <div class="about">
-      <h2>storemydata.in</h2>
-      <p>
-        storemydata.in is a platform for all schools and colleges to interact
-        with the the government by providing their important data about
-        students, which would help government in framing many new policies
-        much more easily.
-      </p>
-    </div>
-    <div class="linksAndContact">
-      <div class="links">
-        <h4>Useful links</h4>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About us</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Terms of service</a></li>
-          <li><a href="">Privacy policy</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--last">Contact us</a>
+          </li>
         </ul>
+      </nav>
+    </header>
+
+    <section class="section--registration">
+      <div class="header--login">
+        <h1>New Registration</h1>
+        <p><span class="imp">* </span>indicates mandatory fields</p>
       </div>
 
-      <div class="contact">
-        <div><strong>Phone: </strong><span>+91 8238434387</span></div>
-        <div>
-          <strong>Email: </strong><span>help@storemydata.gov.in</span>
+      <form id="registerForm" action="/auth/register" method="post">
+        <div class="type__org form-group">
+          <div class="question">
+            <strong> Type of Organisation (School / College)</strong>
+            <span class="imp">*</span>
+          </div>
+          <select name="organisation" id="org" class="dropdown">
+            <option value="select">Select</option>
+            <option value="school">School</option>
+            <option value="college">College</option>
+          </select>
+        </div>
+
+        <div class="state form-group">
+          <div class="question">
+            <strong>State </strong> <span class="imp">*</span>
+          </div>
+          <select
+            onchange="print_city('state', this.selectedIndex);"
+            id="sts"
+            name="state"
+            class="form-control dropdown"
+            required
+          ></select>
+        </div>
+
+        <div class="city form-group">
+          <div class="question">
+            <strong>City </strong> <span class="imp">*</span>
+          </div>
+          <select id="state" class="form-control dropdown" required></select>
+          <script language="javascript">
+            print_state("sts");
+          </script>
+        </div>
+
+        <div class="name__org form-group">
+          <div class="question">
+            <strong>Name of organisation</strong>
+            <span class="imp">*</span>
+          </div>
+          <input
+            type="text"
+            name="organisationName"
+            class="form-control"
+            placeholder="Enter name of Organisation"
+            required
+          />
+        </div>
+
+        <div class="email__org form-group">
+          <div class="question">
+            <strong>Email Address</strong>
+            <span class="imp">*</span>
+          </div>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter email adress"
+            required
+          />
+        </div>
+
+        <div class="password form-group">
+          <div class="question">
+            <strong>Password</strong>
+            <span class="imp">*</span>
+          </div>
+          <input
+            type="text"
+            name="password"
+            class="form-control"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+
+        <div class="institute__code form-group">
+          <div class="question">
+            <strong>Institute Code</strong>
+            <span class="imp">*</span>
+          </div>
+          <input
+            type="text"
+            name="instituteCode"
+            id="instituteCode"
+            class="form-control"
+            placeholder="Enter code"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn--login">REGISTER</button>
+      </form>
+      <div class="ask__login">
+        <p><a href="login">Login</a></p>
+      </div>
+    </section>
+
+    <section id="section--last">
+      <div class="about">
+        <h2>storemydata.in</h2>
+        <p>
+          storemydata.in is a platform for all schools and colleges to interact
+          with the the government by providing their important data about
+          students, which would help government in framing many new policies
+          much more easily.
+        </p>
+      </div>
+      <div class="linksAndContact">
+        <div class="links">
+          <h4>Useful links</h4>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Terms of service</a></li>
+            <li><a href="">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <div><strong>Phone: </strong><span>+91 8238434387</span></div>
+          <div>
+            <strong>Email: </strong><span>help@storemydata.gov.in</span>
+          </div>
+        </div>
+
+        <div class="socials">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
         </div>
       </div>
 
-      <div class="socials">
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-youtube"></i>
+      <div class="sendMessage">
+        <h4>Send us a message</h4>
+        <p>
+          If you are facing some issue then please let us know so that we could
+          work on it.
+        </p>
+        <div class="form">
+          <form action="">
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="subject"
+                class="form-control"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="message"
+                class="form-control message"
+                placeholder="Message"
+                required
+              />
+            </div>
+
+            <div class="submit">
+              <button class="btn btn--submit" type="submit">
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-
-    <div class="sendMessage">
-      <h4>Send us a message</h4>
-      <p>
-        If you are facing some issue then please let us know so that we could
-        work on it.
-      </p>
-      <div class="form">
-        <form action="">
-          <div class="form-group">
-            <input type="text" name="name" class="form-control" placeholder="Your Name" required />
-          </div>
-          <div class="form-group">
-            <input type="text" name="email" class="form-control" placeholder="Your Email" required />
-          </div>
-          <div class="form-group">
-            <input type="text" name="subject" class="form-control" placeholder="Subject" required />
-          </div>
-          <div class="form-group">
-            <input type="text" name="message" class="form-control message" placeholder="Message" required />
-          </div>
-
-          <div class="submit">
-            <button class="btn btn--submit" type="submit">
-              Send message
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-</body>
-
+    </section>
+  </body>
 </html>

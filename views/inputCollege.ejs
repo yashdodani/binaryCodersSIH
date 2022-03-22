@@ -1,10 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="img/logo1.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
@@ -20,20 +18,15 @@
     <header>
       <nav class="nav sticky">
         <div class="logo">
-          <img src="img/logo1.png" alt="#" />
+          <img src="img/logo1.png" alt="" />
           <h1 class="navh1">storemydata.in</h1>
         </div>
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="index">Home</a>
+            <a class="nav__link" href="index.html">Home</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#section--last">About us</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link--btn nav__link btn--show-modal" href="login"
-              >Login / Register</a
-            >
           </li>
 
           <li class="nav__item">
@@ -43,71 +36,68 @@
       </nav>
     </header>
 
-    <section id="section--1">
-      <!-- <img src="img/backg.png" alt="" /> -->
-      <button class="btn btn__school btn__home" href="login">
-        For schools
-      </button>
-      <button class="btn btn__college btn__home" href="login">
-        For colleges
-      </button>
+    <section class="section--input">
+      <form action="">
+        <div class="select">
+          <div class="head">
+            <h1>Upload Data for your college</h1>
+            <i
+              class="fa-solid fa-circle-question"
+              title="Guidelines for input file"
+              id="show-modal"
+            ></i>
+          </div>
+          <div class="question">
+            <strong>Select year </strong> <span class="imp">*</span>
+          </div>
+          <select name="year" id="year" class="dropdown">
+            <option value="select">Select--</option>
+            <option value="year1">Year 1</option>
+            <option value="year2">Year 2</option>
+            <option value="year3">Year 3</option>
+            <option value="year4">Year 4</option>
+          </select>
+        </div>
+        <div class="select">
+          <div class="question">
+            <strong>Select semester </strong> <span class="imp">*</span>
+          </div>
+          <select name="semester" id="semester" class="dropdown">
+            <option value="select">Select--</option>
+            <option value="semester1">Semester 1</option>
+            <option value="semester2">Semester 2</option>
+            <option value="semester3">Semester 3</option>
+            <option value="semester4">Semester 4</option>
+          </select>
+          <div class="class__upload">
+            <p>Click here to upload your file &rarr;</p>
+            <button class="btn btn--upload">Upload file</button>
+          </div>
+        </div>
+      </form>
     </section>
 
-    <section id="section--2">
-      <div class="news__updates section--2__content">
-        <h3 class="section--2__h3">News | Updates</h3>
-        <div class="content">
-          <div class="news">
-            <h5>22/03/2022</h5>
-            <p>
-              ICAI to revise curriculam this year, increase number of IT labs by
-              20% says institute president.
-            </p>
-          </div>
-          <hr />
+    <!-- Guidelines modal window -->
+    <section class="guidelines__college hidden modal">
+      <button class="close-modal btn-close">&times;</button>
+      <h1>Guidelines to input data</h1>
+      <h2>Required fields for file regarding a student :</h2>
 
-          <div class="news">
-            <h5>06/03/2022</h5>
-            <p>
-              Government plans to make affilated colleges degree - awarding
-              multidisciplinary autonomous institutions by 2035.
-            </p>
-          </div>
-          <hr />
-
-          <div class="news">
-            <h5>31/01/2022</h5>
-            <p>
-              Smart upgrade: 200 government colleges to have digital studious.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="right__content section--2__content">
-        <div class="student__survey right__contents">
-          <h3 class="section--2__h3">Login for Government</h3>
-          <div class="content">
-            <div class="topics">
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="help__topics right__contents">
-          <h3 class="section--2__h3">Popular help topics</h3>
-          <div class="content">
-            <div class="topics">
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-            </div>
-          </div>
-        </div>
+      <div class="fields">
+        <ul>
+          <li>Name</li>
+          <li>Duration in years</li>
+          <li>Semester enrollment date</li>
+          <li>Semester completion date</li>
+          <li>Current semester</li>
+          <li>Max score</li>
+          <li>Aquired score</li>
+        </ul>
       </div>
     </section>
+
+    <!-- overlay -->
+    <div class="overlay hidden"></div>
 
     <section id="section--last">
       <div class="about">

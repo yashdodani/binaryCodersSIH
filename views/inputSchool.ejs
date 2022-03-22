@@ -1,10 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="img/logo1.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
@@ -20,20 +18,15 @@
     <header>
       <nav class="nav sticky">
         <div class="logo">
-          <img src="img/logo1.png" alt="#" />
+          <img src="img/logo1.png" alt="" />
           <h1 class="navh1">storemydata.in</h1>
         </div>
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="index">Home</a>
+            <a class="nav__link" href="index.html">Home</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#section--last">About us</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link--btn nav__link btn--show-modal" href="login"
-              >Login / Register</a
-            >
           </li>
 
           <li class="nav__item">
@@ -43,71 +36,59 @@
       </nav>
     </header>
 
-    <section id="section--1">
-      <!-- <img src="img/backg.png" alt="" /> -->
-      <button class="btn btn__school btn__home" href="login">
-        For schools
-      </button>
-      <button class="btn btn__college btn__home" href="login">
-        For colleges
-      </button>
-    </section>
-
-    <section id="section--2">
-      <div class="news__updates section--2__content">
-        <h3 class="section--2__h3">News | Updates</h3>
-        <div class="content">
-          <div class="news">
-            <h5>22/03/2022</h5>
-            <p>
-              ICAI to revise curriculam this year, increase number of IT labs by
-              20% says institute president.
-            </p>
-          </div>
-          <hr />
-
-          <div class="news">
-            <h5>06/03/2022</h5>
-            <p>
-              Government plans to make affilated colleges degree - awarding
-              multidisciplinary autonomous institutions by 2035.
-            </p>
-          </div>
-          <hr />
-
-          <div class="news">
-            <h5>31/01/2022</h5>
-            <p>
-              Smart upgrade: 200 government colleges to have digital studious.
-            </p>
-          </div>
-        </div>
+    <section class="section--input">
+      <div class="head">
+        <h1>Upload Data for your college</h1>
+        <i
+          class="fa-solid fa-circle-question"
+          title="Guidelines for input file"
+          id="show-modal"
+        ></i>
       </div>
-      <div class="right__content section--2__content">
-        <div class="student__survey right__contents">
-          <h3 class="section--2__h3">Login for Government</h3>
-          <div class="content">
-            <div class="topics">
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="help__topics right__contents">
-          <h3 class="section--2__h3">Popular help topics</h3>
-          <div class="content">
-            <div class="topics">
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-              <p>&rarr; How to register with storemydata.in</p>
-            </div>
-          </div>
-        </div>
+      <div class="question">
+        <strong>Select class</strong> <span class="imp">*</span>
+      </div>
+      <select name="class" id="class" class="dropdown">
+        <option value="select">Select--</option>
+        <option value="class1">Class 1</option>
+        <option value="class2">Class 2</option>
+        <option value="class3">Class 3</option>
+        <option value="class4">Class 4</option>
+        <option value="class5">Class 5</option>
+        <option value="class6">Class 6</option>
+        <option value="class7">Class 7</option>
+        <option value="class8">Class 8</option>
+        <option value="class9">Class 9</option>
+        <option value="class10">Class 10</option>
+        <option value="class11">Class 11</option>
+        <option value="class12">Class 12</option>
+      </select>
+      <div class="class__upload">
+        <p>Click here to upload your file &rarr;</p>
+        <button class="btn btn--upload">Upload file</button>
       </div>
     </section>
+
+    <!-- Guidelines modal window -->
+    <section class="guidelines__college hidden modal">
+      <button class="close-modal btn-close">&times;</button>
+      <h1>Guidelines to input data</h1>
+      <h2>Required fields for file regarding a student :</h2>
+
+      <div class="fields">
+        <ul>
+          <li>Enrollment date</li>
+          <li>Completion date</li>
+          <li>Class</li>
+          <li>Board</li>
+          <li>Max score</li>
+          <li>Aquired score</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- overlay -->
+    <div class="overlay hidden"></div>
 
     <section id="section--last">
       <div class="about">

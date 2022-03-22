@@ -305,24 +305,10 @@ body {
   font-size: 16px;
 }
 
-/* input */
+/* input school */
 
-.class {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #efefef;
-  height: 4.8rem;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.class p {
-  font-size: 2.5rem;
-}
-
-.class__content {
-  padding: 2rem;
+.class__upload p {
+  font-size: 1.2rem;
 }
 
 .class__upload {
@@ -331,12 +317,80 @@ body {
   align-items: center;
   background-color: #e2f9ff;
   height: 4.5rem;
-  margin: 1rem 0;
+  margin: 2.5rem 0;
 }
 
 .btn--upload {
-  font-size: 12px;
-  padding: 0.5rem;
+  font-size: 14px;
+  padding: 0.7rem;
+}
+
+/* input college */
+.select {
+  margin: 1.5rem 0;
+}
+
+/* input college modal */
+.guidelines__college {
+  height: 3ovh;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+}
+
+.head i {
+  margin: 0 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* LOGIN MODAL  */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 80vh;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.btn-close {
+  font-size: 40px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.guidelines__college h1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+.fields {
+  margin: 0 2rem;
+}
+
+.fields ul li {
+  font-size: 20px;
 }
 
 .hidden {
