@@ -18,6 +18,57 @@ router.post("/register/school", async (req, res) => {
     }
 });
 
+router.post("/register", async (req, res) => {
+    if (req.body.organisation === "college") {
+        try {
+            let college = await College.findOne({ instituteCode: req.body.instituteCode });
+            if (!college) {
+                college = new College({
+                    name: req.body.organisationName,
+                    email: req.body.email,
+                    password: req.body.password,
+                    instituteCode: req.body.instituteCode,
+                    address: {
+                        state: req.body.state,
+                        city: "SomeCity"
+                    }
+                });
+                console.log(college);
+                await college.save();
+                res.redirect("/login")
+            } else {
+                res.redirect("/login")
+            }
+        } catch (error) {
+            res.redirect("/register");
+        }
+    } else if (req.body.organisation === "school") {
+        try {
+            let school = await School.findOne({ instituteCode: req.body.instituteCode });
+            if (!school) {
+                school = new School({
+                    name: req.body.organisationName,
+                    email: req.body.email,
+                    password: req.body.password,
+                    instituteCode: req.body.instituteCode,
+                    address: {
+                        state: req.body.state,
+                        city: "someCity"
+                    }
+                });
+                await school.save();
+                res.redirect("/login")
+                // res.render("login")
+            } else {
+                res.redirect("/login")
+            }
+        } catch (error) {
+            res.redirect("/register");
+        }
+    }
+
+});
+
 router.post("/register/college", async (req, res) => {
     try {
         let college = await College.findOne({ instituteCode: req.body.instituteCode });

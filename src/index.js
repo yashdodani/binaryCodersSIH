@@ -17,6 +17,11 @@ async function main() {
   await mongoose.connect('mongodb://localhost:27017/test');
 }
 
+app.post("/test",(req,res)=>{
+    console.log(req.body);
+    res.status(200).send();
+});
+
 app.use("/auth",require("./routes/auth"));
 app.use("/school",require("./routes/school"));
 app.use("/college",require("./routes/college"));

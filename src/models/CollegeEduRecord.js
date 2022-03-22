@@ -36,15 +36,7 @@ const CollegeEduRecordSchema = new mongoose.Schema({
     aquiredScore: {
         type: Number,
         required: true
-    },
-    subjectWiseScore: {
-        type: [{
-            name: String,
-            maxScore: Number,
-            aquiredScore: Number
-        }],
-        required: true
-    },
+    }
 });
 
 module.exports = CollegeEduRecordSchema;
