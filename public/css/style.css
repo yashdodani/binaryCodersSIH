@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #efefef;
+  /* width: 80%; */
+  margin: auto;
+}
+
+/* nav */
+.nav {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  /* padding: 0 6rem; */
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 45px;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav__item {
+  padding: 0 3rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #413e66;
+  font-weight: 400;
+}
+
+.nav__link:hover {
+  color: #1bb1dc;
+}
+
+.nav__link--btn {
+  background-color: #1bb1dc;
+  padding: 0.8rem 2.5rem;
+  color: white;
+  border-radius: 3rem;
+  transition: all 0.3s;
+}
+
+.nav__link--btn:hover {
+  background-color: #22a3c7;
+  color: white;
+}
+
+/* section1 */
+#section--1 {
+  height: 60vh;
+  background: url(../img/backgr.jpeg) no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  font-size: 18px;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  background-color: #1bb1dc;
+  color: white;
+  border-radius: 3rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #327f94;
+}
+
+/* section 2 */
+#section--2 {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.section--2__h3 {
+  text-align: center;
+}
+
+.content {
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+}
+.content hr {
+  width: 95%;
+  margin: auto;
+}
+.section--2__content {
+  width: 50%;
+  margin: 2rem 1rem;
+}
+
+.news__updates .content {
+  height: 40h;
+}
+
+.help__topics {
+  margin-top: 1rem;
+}
+
+.help__topics .content {
+  height: 20vh;
+}
+
+.news {
+  padding: 1rem;
+}
+.news p {
+  color: #413e66;
+  cursor: pointer;
+  font-size: 15px;
+}
+.news p:hover {
+  color: #1bb1dc;
+}
+
+.topics {
+  padding: 1rem;
+}
+
+.right__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.right__contents {
+  padding: 0 1rem;
+}
+
+/* section 3 */
+/* #section--3 {
+  height: 80vh;
+  background-color: aquamarine;
+} */
+
+/* section--last  */
+
+#section--last {
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: start; */
+  width: 100%;
+  margin: auto;
+  height: 50vh;
+  background-color: #ebf9fd;
+  padding: 3rem 0;
+}
+
+.about {
+  width: 30%;
+  padding: 0 3rem;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+}
+.about p {
+  font-size: 16px;
+}
+
+.linksAndContact {
+  width: 25%;
+  padding: 0 1rem;
+}
+
+.links h4 {
+  font-size: 16px;
+}
+
+.links ul {
+  list-style-type: none;
+}
+.links ul li {
+  padding: 0.5rem 0;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: #413e66;
+}
+
+.links ul li a:hover {
+  color: #1bb1dc;
+}
+
+.contact {
+  padding: 1rem 0;
+}
+
+.socials i {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.sendMessage {
+  width: 45%;
+}
+
+.sendMessage h4 {
+  text-align: center;
+}
+
+.sendMessage p {
+  font-size: 15px;
+}
+
+.form-group {
+  text-align: left;
+  padding: 0.6rem;
+}
+
+.form-group input {
+  width: 90%;
+  height: 40px;
+  padding: 5px 7px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #faf9f9;
+  outline: none;
+  background-color: #faf9f9;
+}
+
+.form-group input:focus {
+  border: 1px solid #1bb1dc;
+}
+
+.submit {
+  text-align: center;
+}
+
+.btn--submit {
+  font-size: 16px;
+}
+
+/* LOGIN */
+.section--login,
+.section--registration {
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  padding: 2.5rem;
+}
+
+.header--login h1 {
+  font-size: 2rem;
+}
+
+.header--login p {
+  font-size: 15px;
+}
+
+.btn--login {
+  padding: 0.5rem 2rem;
+  text-align: left;
+}
+
+.ask__register p a,
+.ask__login p a {
+  color: #413e66;
+  font-size: 18px;
+}
+
+/* registration */
+.section--registration {
+  text-align: left;
+}
+
+.dropdown {
+  width: 90%;
+  height: 30px;
+  font-size: 16px;
+}
