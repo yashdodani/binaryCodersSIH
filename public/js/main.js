@@ -135,3 +135,29 @@ function print_city(city_id, city_index) {
     );
   }
 }
+
+const classSelect = document.querySelectorAll(".class");
+const classUpload1 = document.querySelectorAll(".class1");
+const classUpload2 = document.querySelectorAll(".class2");
+const classUpload3 = document.querySelectorAll(".class3");
+const classUpload4 = document.querySelectorAll(".class4");
+const classUpload5 = document.querySelectorAll(".class5");
+const classUpload6 = document.querySelectorAll(".class6");
+const classUpload7 = document.querySelectorAll(".class7");
+const classUpload8 = document.querySelectorAll(".class8");
+const classUpload9 = document.querySelectorAll(".class9");
+const classUpload10 = document.querySelectorAll(".class10");
+const classUpload11 = document.querySelectorAll(".class11");
+const classUpload12 = document.querySelectorAll(".class12");
+
+const openUpload = function () {};
+
+classSelect.forEach((item, i) => {
+  item.addEventListener("click", () => {
+    const upload = document.querySelector(`.class${i + 1}`);
+
+    upload.classList.toggle("hidden");
+  });
+});
+
+// smooth functionality kal add kar denge abhi itna hi kar.
